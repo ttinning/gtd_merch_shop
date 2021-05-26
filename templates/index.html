@@ -20,10 +20,19 @@
             <section>
                 <i>Customer: {{ order.customer_name }}</i>
                 <p>Order Date: {{ order.order_date }}</p>
-                <b>Product: {{ order.merch_description }} x {{ order.quantity }}</b>
+                {% for product in order.basket %}
+                <b>Product: {{ product.item }} x {{ product.qty }}</b> - £{{ product.price }}
+                {% set order_total_price = product.price %}
+                <br>
+                {% endfor %}
+                <br>
+                <b>Total for order: £{{ order.basket_total }}</b>
+                <br>
+                <br>
                 <a href="/orders/{{ orders.index(order) }}">Order Details</a>
             </section>
         </section>
+        <br>
         {% endfor %}
     </body>
 </html>
