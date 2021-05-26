@@ -4,13 +4,25 @@
         <title>GTD Merch - {{ title }}</title>
     </head>
     <body>
-        <h1>Order List</h1>
+        <header>
+                <nav>
+                    <ul class="main-nav">
+                        <li class="logo">GTD Merch</li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+        </header>
+        <h2>Order List</h2>
         {% for order in orders %}
         <section>
+            <section>
                 <i>Customer: {{ order.customer_name }}</i>
                 <p>Order Date: {{ order.order_date }}</p>
                 <b>Product: {{ order.merch_description }} x {{ order.quantity }}</b>
                 <a href="/orders/{{ orders.index(order) }}">Order Details</a>
+            </section>
         </section>
         {% endfor %}
     </body>
