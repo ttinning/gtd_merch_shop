@@ -21,12 +21,13 @@
                 <i>Customer: {{ order.customer_name }}</i>
                 <p>Order Date: {{ order.order_date }}</p>
                 {% for product in order.basket %}
-                <b>Product: {{ product.item }} x {{ product.qty }}</b> - £{{ product.price }}
+                <b>Product: {{ product.item.description }} x {{ product.qty }}</b> - £{{ product.price }}
                 {% set order_total_price = product.price %}
                 <br>
+                <img src="/static/imgs/{{ product.item.image_name }}" alt="product_image">
                 {% endfor %}
                 <br>
-                <b>Total for order: £{{ order.basket_total }}</b>
+                <b>Total for order: <u>£{{ order.basket_total }}</u></b>
                 <br>
                 <br>
                 <a href="/orders/{{ orders.index(order) }}">Order Details</a>

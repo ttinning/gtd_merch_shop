@@ -11,19 +11,17 @@ customer_1 = Customer("Harrison Booth", "hbooth@gmail.com")
 customer_2 = Customer("Sandy McMillan", "smac@gmail.com")
 customer_3 = Customer("Gaz Darnell", "gazzaDee@gmail.com")
 
-product_1 = Product("Pine Grove T-Shirt - Medium", 21.99)
-product_2 = Product("AC/DC Jumper - Medium", 34.99)
-product_3 = Product("Foo Fighters, Wasting Light - Vinyl", 17.99)
-product_4 = Product("DJ Shadow, Endtroducing - Digital Download", 6.99)
+product_1 = Product("Pine Grove T-Shirt - Medium", 21.99, "pinegrove_t.png")
+product_2 = Product("AC/DC Jumper - Medium", 34.99, "pinegrove_t.png")
+product_3 = Product("Foo Fighters, Wasting Light - Vinyl", 17.99, "pinegrove_t.png")
+product_4 = Product("DJ Shadow, Endtroducing - Digital Download", 6.99, "pinegrove_t.png")
 
 order1_line1 = OrderLine(product_1, 3)
 order1_line2 = OrderLine(product_3, 2)
 
-
-
-order_001 = Order(customer_1.customer_name, date.today(), 1, product_1.description)
-order_002 = Order(customer_2.customer_name, date.today(), 1, product_2.description)
-order_003 = Order(customer_3.customer_name, date.today(), 1, product_3.description)
+# order_001 = Order(customer_1.customer_name, date.today(), 1, product_1.description)
+# order_002 = Order(customer_2.customer_name, date.today(), 1, product_2.description)
+# order_003 = Order(customer_3.customer_name, date.today(), 1, product_3.description)
 
 order2_line1 = OrderLine(product_1, 1)
 order2_line2 = OrderLine(product_2, 5)
